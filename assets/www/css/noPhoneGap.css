@@ -1,0 +1,28 @@
+#description-button { 
+	display:none; 
+} 
+.settings-icon {
+
+}
+.description-text-wrap { 
+	padding-left: 0px; 
+}
+
+
+
+/************************************************************************************************** NEW iPhone 4 media query */
+
+@media only screen 
+    and (device-width:320px) 
+    and (device-height:480px) {    
+	#MAIN, #MAIN-TRANSITION{
+		/* min-height:460px; this is the min height for WITHOUT the address bar at the bottom on iphones */
+		min-height:416px;
+	}
+
+}
+
+/****************************************************************************************** iPhone 5 */
+
+@media screen and (device-aspect-ratio: 40/71) {
+}

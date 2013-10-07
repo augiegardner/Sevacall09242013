@@ -3,13 +3,14 @@ package com.example.sevacall09242013;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-
-public class MainActivity extends Activity {
+import org.apache.cordova.DroidGap;
+public class MainActivity extends DroidGap {
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		super.setIntegerProperty("splashscreen", R.drawable.splash);
+		super.loadUrl("file:///android_asset/www/index.html", 10000);
 	}
 
 	@Override

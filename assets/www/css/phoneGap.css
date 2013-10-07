@@ -1,0 +1,120 @@
+
+/************************************************************************************************** NEW iPhone 4 media query */
+
+@media only screen 
+    and (device-width:320px) 
+    and (device-height:480px) {    
+	#MAIN, #MAIN-TRANSITION{
+		min-height:460px;
+		/* min-height:416px; //this is the height when the bottom bar is blocking some of the screen */
+	}
+  .sep {
+        /*margin-top:2em!important;*/
+        margin-top:2.3em!important;
+    }
+
+    .sep-text {
+        margin-top:2.2em!important;
+    }
+
+    .sep-shadow{
+        margin-top:2.3em!important;
+    }
+	
+    /*** Ummmm this isnt being triggered...? ***/
+    .button.sep {
+        margin-top:1.7em!important /* to make up for the fact that buttons are 1.5em*/
+    }
+    .timetable table {
+		font-size: .92em;
+    }
+}
+
+
+/* Nexus */
+
+@media (min-width : 360px) and (max-width : 598px) {	
+	.SCMapMarker::after {
+		margin-top:0px!important;
+	}
+	body{
+		font-size:1.1em;
+	}
+	.title-box{
+		font-size:2.8em;
+	}
+	.description-text{
+		font-size:19px;
+		height:100px;
+	}
+	.time-button  {
+		padding-top:20px!important;
+		padding-bottom:20px!important;
+		font-size:14px!important;
+	}
+    .timetable table {
+		font-size: .72em;
+    }
+	.subtext {
+		font-size:.9em!important;
+	}
+	.table-two .company-marker-column div::after {
+		top:-18px;
+	}
+	.title-box{
+		font-size:2.7em;
+	}
+	#info .title-box {
+		font-size:3em;
+	}
+	
+    #description-button {
+    	padding:48px;
+    }
+	.description-text-wrap {
+		padding-left:115px;
+	}
+	
+    #description-button {
+    	padding:48px;
+    }
+	.description-text-wrap {
+		padding-left:115px;
+	}
+	
+	body{
+		font-size:1.1em;
+	}
+}
+
+/****************************************************************************************** iPhone 5 */
+
+@media screen and (device-aspect-ratio: 40/71) {
+
+        /*currently being activated for buttons*/
+	.sep {
+        margin-top:2.3em!important;
+    }
+	
+    /* seps for the header texts */
+    .sep-text {
+        margin-top:2.2em!important;
+    }
+	
+    /* currently for subtexts */
+    .sep-shadow{
+        margin-top:3.3em!important;
+    }
+	
+    /*** Ummmm this isnt being triggered...? ***/
+    .button.sep {
+        margin-top:1.7em!important /* to make up for the fact that buttons are 1.5em*/
+    }
+    #description-button {
+    	padding:49px;
+    }
+    .description-text-wrap{
+    	padding-left: 112px;
+    }
+    
+}

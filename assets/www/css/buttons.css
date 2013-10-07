@@ -1,0 +1,140 @@
+/* All Blue Gradient Buttons */
+.button{
+	border-radius:4px;
+	background:#003366;
+    padding: 15px 0px;
+	padding:15px;
+	cursor:pointer;
+	color:white;
+	text-align:center;
+	font-weight:bold;
+	font-family:arial;
+	font-size:1.5em;
+	
+	/* Background */
+	background: rgb(0,97,150); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,97,150,1) 0%, rgba(0,51,102,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,97,150,1)), color-stop(100%,rgba(0,51,102,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,97,150,1) 0%,rgba(0,51,102,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,97,150,1) 0%,rgba(0,51,102,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,97,150,1) 0%,rgba(0,51,102,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,97,150,1) 0%,rgba(0,51,102,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006196', endColorstr='#003366',GradientType=0 ); /* IE6-9 */
+    
+	/* Depth border */
+	border: 1px solid rgb(0, 30, 107);
+	box-shadow: inset 0px 1px 1px 0px rgb(147, 186, 255);
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgb(147, 186, 255);
+	border-style: outset;
+    
+
+}
+
+.button#actionbutton {
+	width:100%;
+}
+
+.button:active {
+	background: -webkit-linear-gradient(bottom, rgba(0,97,150,1) 0%,rgba(0,51,102,1) 100%);
+	border: 1px solid rgb(0, 30, 107);
+	box-shadow: inset 0px -1px 1px 0px rgb(147, 186, 255);
+	-webkit-box-shadow: inset 0px -1px 1px 0px rgb(147, 186, 255);
+	border-style: outset;
+}
+
+/* Where Button */
+#where-button, #description-button {
+	border-radius:4px;
+	position:relative;
+	cursor:pointer;
+}
+
+#where-button:after {
+	width: 64%;
+	height: 64%;
+	border-radius: 20px;
+	border:3px solid white;
+	content: "";
+	position: absolute;
+	left: 19.5%;
+	top: 19.2%;
+}
+
+#where-button a:before {
+	content: "";
+	position: absolute;
+	content: "";
+	position: absolute;
+	width: 5%;
+	height: 56%;
+	border-top:5px solid white;
+	border-bottom:5px solid white;
+	left: 48%;
+	top: 23%;
+
+}
+#where-button a:after {
+	content: "";
+	position: absolute;
+	width: 56%;
+	height: 5%;
+	left: 23%;
+	border-left:5px solid white;
+	border-right:5px solid white;
+	top: 48.5%;
+}
+
+/* Microphone */
+#description-button:before{
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	margin-left: -10px;
+	height: 12px;
+	width: 21px;
+	border-bottom: 3px solid white;
+	border-style: solid;
+	border-width: 0px 3px 3px 3px;
+	border-color: white;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+#description-button:after {
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	margin-top: -17px;
+	margin-left: -5px;
+	background: white;
+	height: 24px;
+	width: 11px;
+	border-radius: 50px;
+}
+
+#description-button a:before{
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	margin-top: 10px;
+	margin-left: -1px;
+	background: white;
+	height: 8px;
+	width: 3px;
+	border-radius: 50px;
+}
+
+#description-button a:after{
+	position: absolute;
+	content: "";
+	left: 50%;
+	top: 50%;
+	margin-top: 17px;
+	margin-left: -7px;
+	background: white;
+	height: 3px;
+	width: 15px;
+}
