@@ -2930,13 +2930,13 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
 							
 							});
 						//}
-						else {
+						//else {
 							if(self.liveStatus == 4) {
 								clearInterval(recordInterval);
 							
 							}
 							//self.resetPlayback();
-						}
+						//}
 					}, 250);
 					/*
                     self.recInterval = setInterval(function() {
