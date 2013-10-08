@@ -3009,7 +3009,8 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
 					}
 					else {
 						clearInterval(playInterval);
-						self.resetPlayback();
+						if(self.liveStatus == 4) // reached the end of playback (status: STOPPED)
+							self.resetPlayback();
 					}
 				}, 250);
                 $(".recording-status").removeClass("play").addClass("pause");
