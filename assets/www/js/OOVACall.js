@@ -2922,7 +2922,8 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.startRecordTimeoutCounter = 0;
 					var recordInterval = setInterval(function(){
 						//if(self.liveStatus == 1 || self.liveStatus == 2) {
-							self.mediaRec.getCurrentPosition(function(position) {
+							self.mediaRec.getDuration(function(position) {
+								alert(position);
 								if(position >= 0)
 									self.setAudioPosition((position));
 								console.log("Recording length: " + position + " seconds" );
