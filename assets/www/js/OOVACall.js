@@ -2919,32 +2919,9 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.mediaRec.startRecord();
                     self.length = 0;
                     self.setAudioPosition(self.length);
-					/*
-                    self.startRecordTimeoutCounter = 0;
-					alert("starting");
-					var recordInterval = setInterval(function(){
-						//if(self.liveStatus == 1 || self.liveStatus == 2) {
-							self.mediaRec.getDuration(function(position) {
-								alert(position);
-								if(position >= 0)
-									self.setAudioPosition((position));
-								console.log("Recording length: " + position + " seconds" );
-							}, function(e) {
-							
-							});
-						//}
-						//else {
-							if(self.liveStatus == 4) {
-								clearInterval(recordInterval);
-							
-							}
-							//self.resetPlayback();
-						//}
-					}, 250);
-					*/
 					
                     self.recInterval = setInterval(function() {
-                    	self.length++;
+                    	self.length += .250;
                         self.setAudioPosition(self.length);
                         console.log("Recording length: " + self.length + " seconds" );
                     }, 250);

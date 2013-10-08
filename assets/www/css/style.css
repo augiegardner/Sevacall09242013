@@ -1863,22 +1863,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9ffffff', e
 	.subtext {
 		font-size:.72em!important;
 	}
-    .description-text {
-		height:103px;
-        font-size:17px; /* changed from 19 */
-    }
-    #description-button {
-    	padding:42px;
-    }
-    .description-text-wrap{
-    	padding-left: 92px;
-    }
+	
     .timetable table {
 		font-size: .72em;
     }
+	
 	.where-text-wrap {
 		padding-right:70px;
 	}
+	
+    #description-button {
+    	padding:35px;
+    }
+	
+    .description-text-wrap{
+    	padding-left: 90px;
+    }
+	
+	.description-text {
+		height: 71px;
+	}
+    
 }
 
 /************************** THIN PHONES ************************************/

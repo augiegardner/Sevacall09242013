@@ -110,11 +110,16 @@
     .button.sep {
         margin-top:1.7em!important /* to make up for the fact that buttons are 1.5em*/
     }
+	
     #description-button {
-    	padding:49px;
+    	padding:35px;
     }
+	
     .description-text-wrap{
-    	padding-left: 112px;
+    	padding-left: 90px;
     }
+	.description-text {
+		height: 71px;
+	}
     
 }
