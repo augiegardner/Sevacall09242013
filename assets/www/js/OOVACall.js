@@ -2921,7 +2921,7 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.setAudioPosition(self.length);
                     self.startRecordTimeoutCounter = 0;
 					var recordInterval = setInterval(function(){
-						if(self.liveStatus == 1 || self.liveStatus == 2) {
+						//if(self.liveStatus == 1 || self.liveStatus == 2) {
 							self.mediaRec.getCurrentPosition(function(position) {
 								if(position >= 0)
 									self.setAudioPosition((position));
@@ -2929,12 +2929,11 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
 							}, function(e) {
 							
 							});
-						}
+						//}
 						else {
-							self.startRecordTimeoutCounter++;
-							if(self.startRecordTimeoutCounter == 20) {
-								alert("done");
+							if(self.liveStatus == 4) {
 								clearInterval(recordInterval);
+							
 							}
 							//self.resetPlayback();
 						}
