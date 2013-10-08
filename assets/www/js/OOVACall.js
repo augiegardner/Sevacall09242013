@@ -2919,7 +2919,7 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.mediaRec.startRecord();
                     self.length = 0;
                     self.setAudioPosition(self.length);
-                    
+                    self.startRecordTimeoutCounter = 0;
 					var recordInterval = setInterval(function(){
 						if(self.liveStatus == 1 || self.liveStatus == 2) {
 							self.mediaRec.getCurrentPosition(function(position) {
@@ -2931,7 +2931,11 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
 							});
 						}
 						else {
-							clearInterval(recordInterval);
+							self.startRecordTimeoutCounter++;
+							if(self.startRecordTimeoutCounter == 20) {
+								alert("done");
+								clearInterval(recordInterval);
+							}
 							//self.resetPlayback();
 						}
 					}, 250);
