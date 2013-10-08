@@ -1,9 +1,0 @@
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.hello-world"
-        version   = "1.0.0">
-        
-    <gap:splash src="PGBuildRes/res/screen/ios/Default~iphone.png"    gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="PGBuildRes/res/screen/ios/Default@2x~iphone.png" gap:platform="ios"     width="640" height="960" />
-    
-</widget>
