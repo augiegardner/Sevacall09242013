@@ -2920,11 +2920,28 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.length = 0;
                     self.setAudioPosition(self.length);
                     
+					var recordInterval = setInterval(function(){
+						if(self.liveStatus == 1 || self.liveStatus == 2) {
+							self.mediaRec.getCurrentPosition(function(position) {
+								if(position >= 0)
+									self.setAudioPosition((position));
+								console.log("Recording length: " + position + " seconds" );
+							}, function(e) {
+							
+							});
+						}
+						else {
+							clearInterval(recordInterval);
+							//self.resetPlayback();
+						}
+					}, 250);
+					/*
                     self.recInterval = setInterval(function() {
                     	self.length++;
                         self.setAudioPosition(self.length);
                         console.log("Recording length: " + self.length + " seconds" );
                     }, 1000);
+					*/
                     
                 },5);
             },
@@ -2999,7 +3016,8 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
 					if(self.liveStatus == 1 || self.liveStatus == 2) {
 						$(".recording-status").removeClass("play").addClass("pause");
                     	self.mediaRec.getCurrentPosition(function(position) {
-							self.setAudioPosition((position));
+							if(position >= 0)
+								self.setAudioPosition((position));
 							console.log("Playing length: " + position + " seconds" );
 						}, function(e) {
 						

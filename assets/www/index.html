@@ -99,7 +99,7 @@
 					<form style="" action="javascript: OOvaCall.actionStep1();">
 					
 						<div class="what-box sep-text noGPUAccel" style="position:relative;">
-							<span class="title-box">I NEED A</span>
+							<span class="title-box"><a href='http://www.google.com'>I NEED A</a></span>
 							<div id="what-text-overlay-fix">Select Service Category</div>
 							<select id="what-select" placeholder="Select Service Category" class="what-text nativeSelect touchandclickevent">
 								<option id="select-service-category"><span class="testing">Select Service Category</span></option>
@@ -521,6 +521,22 @@ Removed 8.5.2013 and added "Save" button
                     console.log("FastClick not instantiated yet, checking again...");
                 }
             }, 1000);
+            
+            // open Android links in the external browser window
+            //
+            if(isPhoneGap && device.platform == "Android") {
+	            $('body').delegate("a", "click", function(evemt) {
+				    var href = $(this).attr('href');
+				    	alert(href);
+				    if (typeof href !== 'undefined' &&
+				        href.substr(0, 7) === 'http://')
+				    {
+				        event.preventDefault();
+				        // Open in default browser App (on desktop: open in new window/tab)
+				        window.open(this.href, '_system', 'location=no');
+				    }
+				});
+			}
         </script>
 </body>
 </html>
