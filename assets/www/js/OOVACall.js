@@ -2920,6 +2920,7 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                     self.length = 0;
                     self.setAudioPosition(self.length);
                     self.startRecordTimeoutCounter = 0;
+					alert("starting");
 					var recordInterval = setInterval(function(){
 						//if(self.liveStatus == 1 || self.liveStatus == 2) {
 							self.mediaRec.getDuration(function(position) {
