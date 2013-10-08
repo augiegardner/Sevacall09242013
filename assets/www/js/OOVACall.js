@@ -2941,7 +2941,7 @@ String.prototype.reverse=function(){return this.split("").reverse().join("");}
                 self.recInterval = null;
                 console.log("stopRecording()");
                 self.mediaRec.stopRecord();
-                $(".recording-time").text("0:"+(self.length < 10 ? '0' : '') + self.length);
+                $(".recording-time").text("0:"+(self.length < 10 ? '0' : '') + Math.floor(self.length));
                 
                 if(self.length < 3) {
                 	TRACK("DETAILS_RECORDING_SCREEN_RECORDING_TOO_SHORT_NOTIFICATION");
