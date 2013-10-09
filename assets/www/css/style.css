@@ -1027,11 +1027,17 @@ margin-left: -10px;
 min-height:300px;
 }
 
+.calls-saved-table {
+	height: 100%;
+	margin: 0 auto;
+	padding-bottom: 15%;
+}
+
 .calls-saved-container {
 	max-width:175px;
 	margin: 0 auto;
 	padding: 60px 0px;
-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 .calls-saved-num {
