@@ -1052,14 +1052,14 @@ function DeviceReady(callback) {
 									this.radialBackground = true;
 									console.log("                    +++ Adding Radial Background +++                     ");
 									//cross-browser/phone solution must use browser/phone width to set the radiality.
-									transitionBox.css({"background-image" : "-webkit-gradient(radial, 50% 50%, 0, 50% 50%, " + window.screen.width + ", color-stop(0%, rgb(60, 100, 168)), color-stop(95%, rgb(0, 53, 97)))"});
+									transitionBox.css({"background-image" : "-webkit-gradient(radial, 50% 50%, 0, 50% 50%, " + window.screen.width + ", color-stop(0%, rgb(60, 100, 168)), color-stop(95%, rgb(0, 53, 97)))"}).addClass("finalPageSnapToBottom");
 								},
 								
 			removeRadialBackground: function() {	
 									this.radialBackground = false;
 									console.log("                    +++ Removing Radial Background +++                     ");
-									$("#MAIN-TRANSITION").css({"background-image" : "", "overflow" : "hidden"});
-									$("#MAIN").css({"background-image" : "", "overflow" : "hidden"});
+									$("#MAIN-TRANSITION").css({"background-image" : "", "overflow" : "hidden"}).removeClass("finalPageSnapToBottom");
+									$("#MAIN").css({"background-image" : "", "overflow" : "hidden"}).removeClass("finalPageSnapToBottom");
 								},
 								
 			requestCompleted:	function( callsSaved ) {
