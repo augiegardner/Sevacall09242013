@@ -10,7 +10,7 @@ var DEFAULT_DESCRIPTION = "Describe what you need help with in as much detail as
 var TWITTER_MESSAGE = "SevaCall found me help in minutes! sevacall.com #savetime #awesome @sevacall";
 
 var omitFinalPage = false;
-var testing = false; // gett ing all company ratings may not work with the testing on
+var testing = true; // gett ing all company ratings may not work with the testing on
 var clearStorage = false; // clears the local storage on page load
 
 if(clearStorage) {
