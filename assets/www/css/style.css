@@ -1032,6 +1032,9 @@ color:#003366;
 	bottom:0px;
 }
 
+.finalPageSnapToBottom {
+	bottom:0px;
+}
 
 .calls-saved-table {
 	height: 100%;
