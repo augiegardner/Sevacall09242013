@@ -1015,17 +1015,23 @@ color:#003366;
 
 /************** Calls Saved Page **************/
 .calls-saved {
-color: white;
-text-align: center;
-font-family: arial;
-font-size: 30px;
-font-weight: bold;
-width: 100%;
-padding: 0px 10px;
-box-sizing: content-box;
-margin-left: -10px;
-min-height:300px;
+	color: white;
+	text-align: center;
+	font-family: arial;
+	font-size: 30px;
+	font-weight: bold;
+	/*width: 100%;*/
+	padding: 0px 10px;
+	box-sizing: content-box;
+	/*margin-left: -10px;*/
+	min-height:300px;
+	position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
 }
+
 
 .calls-saved-table {
 	height: 100%;
